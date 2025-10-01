@@ -1,0 +1,10 @@
+dotnet tool install --global dotnet-ef --version 9.0.7
+
+<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.7" />
+<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.7">
+  <PrivateAssets>all</PrivateAssets>
+  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+</PackageReference>
+<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+
+dotnet ef dbcontext scaffold "host=localhost;database=library;Username=postgres;Password=>postgresqlpassword>;" Npgsql.EntityFrameworkCore.Postgresql --context-dir DbContexts  --output-dir Models -f
