@@ -1,0 +1,8 @@
+
+Bu klasörün bulunduğu  yerde powershell aç 
+ .\ProjectCreator.ps1 -SolutionName "TestProject"
+komutunu çalıştırınca proje oluşur
+
+yine aynı yerde powershell aç
+
+ .\Scaffolder.ps1 -SolutionName "TestProject" -Cnstr "Data Source=localhost,1433;Initial Catalog=dbname;TrustServerCertificate=True;User ID=sa;Password=password;" -Provider "Microsoft.EntityFrameworkCore.SqlServer" -ContextName "ScaffoldedDbContext" -Tables "LogInceleme,LogInceleme,LogIncelemeSorgulayan,LogIncelemeSorgulananDeger,LogIncelemeTablolar"
